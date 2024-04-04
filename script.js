@@ -117,7 +117,12 @@ alex.hobbies[1].favouriteGames[0] = "palworld";
 console.log(alex);
 
 
-let weather = "auroras";
+/**
+ * Status of the weather, manually set.
+ * @date 4/4/2024 - 8:59:52 PM
+ * @author BigfootDS
+ */
+let weather = "rainy";
 
 switch (weather) {
 	case "sunny":
@@ -138,9 +143,11 @@ switch (weather) {
 
 
 if (weather == "sunny") {
-
+	console.log("Sunny weather is nice when it's not hot!");
 } else if (weather == "rainy") {
-	
+	console.log("Rain is nice when it's not torrential!");
+} else {
+	console.log("Crazy weather, am I right?");
 }
 
 
