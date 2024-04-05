@@ -209,3 +209,16 @@ function logTheTeam () {
 logTheTeam();
 
 
+const logTheTeamAlternate = (targetSize = 4) => {
+	// double equals is checking for value
+	// type coercion happens where possible automatically
+	if (pokemonTeam.length == targetSize){
+		console.log("There are + " + targetSize + " pokemon in the team");
+	}
+
+	// triple equals is checking for value AND data type
+	if (pokemonTeam.length === targetSize){
+		console.log("There are " +  targetSize  + " Pokemon in the team, this is from the strict equals comparison");
+	}
+}
+logTheTeamAlternate();

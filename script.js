@@ -166,28 +166,10 @@ let pokemonTeam = [
 function logTheTeam () {
 	sortedTeam = pokemonTeam.sort();
 
-	// sortedTeam.forEach((pokemon, arrayIndex) => {
-	// 	console.log(pokemon + " is at index of " + arrayIndex);
-	// });
-
-	// console.log(pokemonTeam.entries());
-	// for (const [index, pokemon] of sortedTeam.entries()) {
-	// 	console.log(`${pokemon} is at index of ${index}`);
-	// }
-
-
 	let [firstPokemon, ...otherPokemon] = sortedTeam;
 
 	console.log(firstPokemon);
 	console.log(otherPokemon);
-
-	// while (true){
-	// 	console.log("Infinite loop");
-	// }
-
-	// while (sortedTeam.length){
-	// 	console.log(sortedTeam.pop());
-	// }
 
 	do {
 		console.log(sortedTeam.pop());
@@ -198,17 +180,25 @@ function logTheTeam () {
 	for (let index = 0; index < sortedTeam.length; index++) {
 		console.log("Pokemon at index " + index + " is " + sortedTeam[index]);
 	}
-
-
-	// for (const pokemon of sortedTeam) {
-	// 	console.log(pokemon);
-	// }
 }
 
+// logTheTeam();
 
-logTheTeam();
 
+const logTheTeamAlternate = (targetSize = 4) => {
+	// double equals is checking for value
+	// type coercion happens where possible automatically
+	if (pokemonTeam.length == targetSize){
+		console.log("There are + " + targetSize + " pokemon in the team");
+	}
 
+	// triple equals is checking for value AND data type
+	if (pokemonTeam.length === targetSize){
+		console.log("There are " +  targetSize  + " Pokemon in the team, this is from the strict equals comparison");
+	}
+}
+logTheTeamAlternate();
+logTheTeamAlternate(2);
 
 
 
